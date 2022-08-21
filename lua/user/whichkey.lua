@@ -75,14 +75,15 @@ vim.g.mapleader = " "
 wk.register({
 	h = { "<cmd>nohlsearch<cr>", "Clear highlights" },
 	e = { "<cmd>NvimTreeToggle<cr>", "File tree" },
-  q = { "<cmd>cclose<cr>", "Close quickfix"},
+	q = { "<cmd>cclose<cr>", "Close quickfix" },
 	f = {
 		name = "Find",
 		f = { ":Telescope find_files<cr>", "Files" },
 		g = { ":Telescope live_grep<cr>", "Grep" },
 		p = { ":Telescope projects<cr>", "Projects" },
 		b = { ":Telescope buffers<cr>", "Buffers" },
-    k = { ":Telescope keymaps<cr>", "Keymaps"}
+		k = { ":Telescope keymaps<cr>", "Keymaps" },
+		t = { ":Telescope colorscheme<cr>", "Themes" },
 	},
 	g = {
 		name = "Git",
@@ -100,19 +101,19 @@ wk.register({
 		u = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
 		t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
 	},
-  l = {
-    name = "LSP",
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format file" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "LSP install" },
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
-    j = { "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", "Next diagnostic" },
-    k = { "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", "Prev diagnostic" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
-    q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Set loc list" },
-    h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Help"}
-  }
+	l = {
+		name = "LSP",
+		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format file" },
+		i = { "<cmd>LspInfo<cr>", "Info" },
+		I = { "<cmd>LspInstallInfo<cr>", "LSP install" },
+		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
+		j = { "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", "Next diagnostic" },
+		k = { "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", "Prev diagnostic" },
+		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
+		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Set loc list" },
+		h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Help" },
+	},
 }, {
 	prefix = "<leader>",
 })
