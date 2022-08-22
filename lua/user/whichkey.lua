@@ -88,6 +88,17 @@ wk.register({
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
+    -- These are defined in gitsigns.lua, here they are only made part of WhichKey.
+    s = { "Stage hunk"},
+    u = { "Unstage hunk"},
+    r = { "Reset hunk"},
+    S = { "Stage buffer"},
+    R = { "Reset buffer"},
+    p = { "Preview hunk"},
+    b = { "Blame line"},
+    B = { "Blame line full"},
+    t = { "Toggle blame"},
+    d = { "Diff"},
 	},
 	d = {
 		name = "DAP",
