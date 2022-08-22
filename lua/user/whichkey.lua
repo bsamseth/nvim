@@ -84,7 +84,13 @@ wk.register({
 		b = { ":Telescope buffers<cr>", "Buffers" },
 		k = { ":Telescope keymaps<cr>", "Keymaps" },
 		t = { ":Telescope colorscheme<cr>", "Themes" },
+		a = { ":Telescope file_browser<cr>", "All files" },
 	},
+  b = {
+    name = "Buffers",
+    b = { ":Telescope buffers", "Buffers"},
+    d = { ":bdelete", "Delete"},
+  },
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
