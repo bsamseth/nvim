@@ -95,6 +95,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+	use({ "tpope/vim-fugitive", commit = "b411b753f805b969cca856e2ae51fdbab49880df" })
 
 	-- DAP
 	use({ "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" })
@@ -110,7 +111,7 @@ return packer.startup(function(use)
 	-- Nvim in every browser text field!?
 	use({
 		"glacambre/firenvim",
-    commit = "56a49d79904921a8b4405786e12b4e12fbbf171b",
+		commit = "56a49d79904921a8b4405786e12b4e12fbbf171b",
 		run = function()
 			vim.fn["firenvim#install"](0)
 		end,
