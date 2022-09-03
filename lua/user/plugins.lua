@@ -110,6 +110,7 @@ return packer.startup(function(use)
 	-- Nvim in every browser text field!?
 	use({
 		"glacambre/firenvim",
+    commit = "56a49d79904921a8b4405786e12b4e12fbbf171b",
 		run = function()
 			vim.fn["firenvim#install"](0)
 		end,
