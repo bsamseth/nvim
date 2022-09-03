@@ -104,6 +104,9 @@ return packer.startup(function(use)
 	-- Copilot
 	use({ "github/copilot.vim", commit = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d" })
 
+	-- harpoon
+	use({ "ThePrimeagen/harpoon", commit = "f4aff5bf9b512f5a85fe20eb1dcf4a87e512d971" })
+
 	-- Nvim in every browser text field!?
 	use({
 		"glacambre/firenvim",
