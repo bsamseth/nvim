@@ -89,7 +89,7 @@ wk.register({
 	b = {
 		name = "Buffers",
 		b = { ":Telescope buffers", "Buffers" },
-		d = { ":bdelete", "Delete" },
+		d = { ":bdelete<cr>", "Delete" },
 	},
 	g = {
 		name = "Git",
