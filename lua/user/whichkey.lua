@@ -134,9 +134,9 @@ wk.register({
   p = {
     name = "Harpoon",
     ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 1"},
-    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 2"},
-    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 3"},
-    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 4"},
+    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Mark 2"},
+    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Mark 3"},
+    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Mark 4"},
     a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add mark"},
     s = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Search marks"},
   }
