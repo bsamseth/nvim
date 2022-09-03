@@ -104,6 +104,14 @@ return packer.startup(function(use)
 	-- Copilot
 	use({ "github/copilot.vim", commit = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d" })
 
+	-- Nvim in every browser text field!?
+	use({
+		"glacambre/firenvim",
+		run = function()
+			vim.fn["firenvim#install"](0)
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
