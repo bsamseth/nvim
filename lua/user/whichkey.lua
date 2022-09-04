@@ -78,13 +78,13 @@ wk.register({
 	q = { "<cmd>cclose<cr>", "Close quickfix" },
 	f = {
 		name = "Find",
-		f = { ":Telescope find_files<cr>", "Files" },
+		f = { ":Telescope find_files hidden=true<cr>", "Files" },
 		g = { ":Telescope live_grep<cr>", "Grep" },
 		p = { ":Telescope projects<cr>", "Projects" },
 		b = { ":Telescope buffers<cr>", "Buffers" },
 		k = { ":Telescope keymaps<cr>", "Keymaps" },
 		t = { ":Telescope colorscheme<cr>", "Themes" },
-		a = { ":Telescope file_browser<cr>", "All files" },
+		a = { ":Telescope file_browser hidden=true<cr>", "All files" },
 	},
 	b = {
 		name = "Buffers",
@@ -131,15 +131,28 @@ wk.register({
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Set loc list" },
 		h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Help" },
 	},
-  p = {
-    name = "Harpoon",
-    ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 1"},
-    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Mark 2"},
-    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Mark 3"},
-    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Mark 4"},
-    a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add mark"},
-    s = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Search marks"},
-  }
+	p = {
+		name = "Harpoon",
+		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 1" },
+		["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Mark 2" },
+		["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Mark 3" },
+		["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Mark 4" },
+		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add mark" },
+		s = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Search marks" },
+	},
+	t = {
+		name = "Tests",
+		t = { "<cmd>lua require('neotest').run.run()<cr>", "Test nearest" },
+		T = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", "Debug nearest" },
+		f = { "<esc>:TestNearestWithExtraArgs ", "Test file" },
+		F = { "<esc>:DebugNearestWithExtraArgs ", "Debug file" },
+		o = { "<cmd>lua require('neotest').output.open()<cr>", "Open output" },
+		a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach to running test" },
+		S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop test" },
+		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
+		j = { "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", "Jump to next failed test" },
+		k = { "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", "Jump to prev failed test" },
+	},
 }, {
 	prefix = "<leader>",
 })
