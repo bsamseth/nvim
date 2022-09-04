@@ -100,6 +100,12 @@ return packer.startup(function(use)
 	use({ "rcarriga/nvim-dap-ui", commit = "225115ae986b39fdaffaf715e571dd43b3ac9670" })
 	use({ "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" })
 
+	-- Testing
+	use({ "antoinemadec/FixCursorHold.nvim", commit = "5aa5ff18da3cdc306bb724cf1a138533768c9f5e" }) -- required by neotest
+	use({ "nvim-neotest/neotest", commit = "a3229e979980c8b78e12ab9741e8c41390643b37" })
+	use({ "nvim-neotest/neotest-python", commit = "c76e25df6573a32fe5764693adbc572c8c89f620" })
+	use({ "rouge8/neotest-rust", commit = "b60f2fa3d47ce1f8c05ceb45e48da9122600c472" })
+
 	-- Copilot
 	use({ "github/copilot.vim", commit = "1bfbaf5b027ee4d3d3dbc828c8bfaef2c45d132d" })
 
