@@ -88,8 +88,8 @@ wk.register({
 	},
 	b = {
 		name = "Buffers",
-		b = { ":Telescope buffers", "Buffers" },
-		d = { ":bdelete<cr>", "Delete" },
+		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+		d = { "<cmd>bdelete<cr>", "Delete" },
 	},
 	g = {
 		name = "Git",
@@ -109,6 +109,7 @@ wk.register({
 	d = {
 		name = "DAP",
 		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
+		B = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", "Conditional breakpoint" },
 		c = { "<cmd>lua require'dap'.continue()<cr>", "Start/Continue" },
 		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
 		o = { "<cmd>lua require'dap'.step_over()<cr>", "Step over" },
@@ -144,6 +145,7 @@ wk.register({
 		name = "Tests",
 		t = { "<cmd>lua require('neotest').run.run()<cr>", "Test nearest" },
 		T = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", "Debug nearest" },
+		l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run last" },
 		f = { "<esc>:TestNearestWithExtraArgs ", "Test file" },
 		F = { "<esc>:DebugNearestWithExtraArgs ", "Debug file" },
 		o = { "<cmd>lua require('neotest').output.open()<cr>", "Open output" },
