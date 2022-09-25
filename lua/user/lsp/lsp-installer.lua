@@ -10,7 +10,7 @@ local servers = {
   "jsonls",
   "yamlls",
   "terraformls",
-  "rust_analyzer",
+  -- "rust_analyzer",   -- <- This is set up by rust-tools.nvim, see rusttools.lua
 }
 
 lsp_installer.setup()

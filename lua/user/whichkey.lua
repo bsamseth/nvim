@@ -132,6 +132,15 @@ wk.register({
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Set loc list" },
 		h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Help" },
 	},
+  r = {
+    name = "Rust",
+    e = { "<cmd>lua require('rust-tools').expand_macro.expand_macro()<cr>", "Expand macro" },
+    j = { "<cmd>lua require('rust-tools').move_item.move_item(false)<cr>", "Move item down" },
+    k = { "<cmd>lua require('rust-tools').move_item.move_item(true)<cr>", "Move item up" },
+    c = { "<cmd>lua require('rust-tools').open_cargo_toml.open_cargo_toml()<cr>", "Open cargo.toml" },
+    p = { "<cmd>lua require('rust-tools').parent_module.parent_module()<cr>", "Parent module" },
+    t = { "<cmd>lua require('rust-tools').hover_range.hover_range()<cr>", "Type of selection" },
+  },
 	p = {
 		name = "Harpoon",
 		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 1" },
@@ -154,6 +163,7 @@ wk.register({
 		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
 		j = { "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", "Jump to next failed test" },
 		k = { "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", "Jump to prev failed test" },
+    r = { "<cmd>lua require('rust-tools').runnables.runnables()<cr>", "Rust runnables" },
 	},
 }, {
 	prefix = "<leader>",
