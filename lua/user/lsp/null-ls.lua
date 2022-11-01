@@ -15,7 +15,7 @@ null_ls.setup({
 		formatting.isort.with({ extra_args = { "--profile", "black" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		diagnostics.flake8,
+		-- diagnostics.flake8,
 		diagnostics.mypy,
 	},
 })

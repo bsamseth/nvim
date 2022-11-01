@@ -109,7 +109,10 @@ wk.register({
 	d = {
 		name = "DAP",
 		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
-		B = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", "Conditional breakpoint" },
+		B = {
+			"<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>",
+			"Conditional breakpoint",
+		},
 		c = { "<cmd>lua require'dap'.continue()<cr>", "Start/Continue" },
 		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
 		o = { "<cmd>lua require'dap'.step_over()<cr>", "Step over" },
@@ -121,7 +124,7 @@ wk.register({
 	},
 	l = {
 		name = "LSP",
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format file" },
+		f = { "<cmd>lua vim.lsp.buf.format{async = true}<cr>", "Format file" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "LSP install" },
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
@@ -132,15 +135,34 @@ wk.register({
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Set loc list" },
 		h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Help" },
 	},
-  r = {
-    name = "Rust",
-    e = { "<cmd>lua require('rust-tools').expand_macro.expand_macro()<cr>", "Expand macro" },
-    j = { "<cmd>lua require('rust-tools').move_item.move_item(false)<cr>", "Move item down" },
-    k = { "<cmd>lua require('rust-tools').move_item.move_item(true)<cr>", "Move item up" },
-    c = { "<cmd>lua require('rust-tools').open_cargo_toml.open_cargo_toml()<cr>", "Open cargo.toml" },
-    p = { "<cmd>lua require('rust-tools').parent_module.parent_module()<cr>", "Parent module" },
-    t = { "<cmd>lua require('rust-tools').hover_range.hover_range()<cr>", "Type of selection" },
-  },
+	r = {
+		name = "Rust",
+		e = { "<cmd>lua require('rust-tools').expand_macro.expand_macro()<cr>", "Expand macro" },
+		j = { "<cmd>lua require('rust-tools').move_item.move_item(false)<cr>", "Move item down" },
+		k = { "<cmd>lua require('rust-tools').move_item.move_item(true)<cr>", "Move item up" },
+		c = { "<cmd>lua require('rust-tools').open_cargo_toml.open_cargo_toml()<cr>", "Open cargo.toml" },
+		p = { "<cmd>lua require('rust-tools').parent_module.parent_module()<cr>", "Parent module" },
+		t = { "<cmd>lua require('rust-tools').hover_range.hover_range()<cr>", "Type of selection" },
+
+		-- keymap("n", "<leader>rh", "<cmd>RustSetInlayHints<Cr>", key_opts)
+		-- keymap("n", "<leader>rhd", "<cmd>RustDisableInlayHints<Cr>", key_opts)
+		-- keymap("n", "<leader>th", "<cmd>RustToggleInlayHints<Cr>", key_opts)
+		-- keymap("n", "<leader>rr", "<cmd>RustRunnables<Cr>", key_opts)
+		-- keymap("n", "<leader>rem", "<cmd>RustExpandMacro<Cr>", key_opts)
+		-- keymap("n", "<leader>roc", "<cmd>RustOpenCargo<Cr>", key_opts)
+		-- keymap("n", "<leader>rpm", "<cmd>RustParentModule<Cr>", key_opts)
+		-- keymap("n", "<leader>rjl", "<cmd>RustJoinLines<Cr>", key_opts)
+		-- keymap("n", "<leader>rha", "<cmd>RustHoverActions<Cr>", key_opts)
+		-- keymap("n", "<leader>rhr", "<cmd>RustHoverRange<Cr>", key_opts)
+		-- keymap("n", "<leader>rmd", "<cmd>RustMoveItemDown<Cr>", key_opts)
+		-- keymap("n", "<leader>rmu", "<cmd>RustMoveItemUp<Cr>", key_opts)
+		-- keymap("n", "<leader>rsb", "<cmd>RustStartStandaloneServerForBuffer<Cr>", key_opts)
+		-- keymap("n", "<leader>rd", "<cmd>RustDebuggables<Cr>", key_opts)
+		-- keymap("n", "<leader>rv", "<cmd>RustViewCrateGraph<Cr>", key_opts)
+		-- keymap("n", "<leader>rw", "<cmd>RustReloadWorkspace<Cr>", key_opts)
+		-- keymap("n", "<leader>rss", "<cmd>RustSSR<Cr>", key_opts)
+		-- keymap("n", "<leader>rxd", "<cmd>RustOpenExternalDocs<Cr>", key_opts)
+	},
 	p = {
 		name = "Harpoon",
 		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Mark 1" },
@@ -163,7 +185,7 @@ wk.register({
 		s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
 		j = { "<cmd>lua require('neotest').jump.next({ status = 'failed' })<cr>", "Jump to next failed test" },
 		k = { "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<cr>", "Jump to prev failed test" },
-    r = { "<cmd>lua require('rust-tools').runnables.runnables()<cr>", "Rust runnables" },
+		r = { "<cmd>lua require('rust-tools').runnables.runnables()<cr>", "Rust runnables" },
 	},
 }, {
 	prefix = "<leader>",

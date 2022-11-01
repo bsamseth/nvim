@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use({ "folke/which-key.nvim" })
 	use({ "ggandor/leap.nvim" })
 	use({ "max397574/better-escape.nvim" })
+  use({ "kmonad/kmonad-vim" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
