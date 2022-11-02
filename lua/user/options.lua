@@ -1,11 +1,5 @@
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
-vim.g.clipboard = {
-	name = "win32yank-wsl",
-	copy = { ["+"] = "win32yank.exe -i --crlf", ["*"] = "win32yank.exe -i --crlf" },
-	paste = { ["+"] = "win32yank.exe -o --lf", ["*"] = "win32yank.exe -o --lf" },
-	cache_enabled = 0,
-}
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
@@ -47,4 +41,4 @@ vim.opt.shortmess:append("c")
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
 
-vim.g.python3_host_prog = "/home/bendik/.local/virtualenvs/neovim/bin/python"
+vim.g.python3_host_prog = "/Users/bsamseth/.local/virtualenvs/neovim/bin/python"
