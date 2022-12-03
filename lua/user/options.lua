@@ -7,6 +7,7 @@ vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
+vim.opt.mousescroll = "ver:1,hor:1"
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 0 -- always show tabs
@@ -35,7 +36,7 @@ vim.opt.wrap = false -- display lines as one long line
 vim.opt.textwidth = 119
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "Hack Nerd Font Mono,Material Icons,FontAwesome,all-the-icons:h11" -- the font used in graphical neovim applications
+vim.opt.guifont = "Hack Nerd Font Mono,Material Icons,FontAwesome,all-the-icons:h13" -- the font used in graphical neovim applications
 vim.opt.fillchars.eob = " "
 vim.opt.shortmess:append("c")
 vim.opt.whichwrap:append("<,>,[,],h,l")
