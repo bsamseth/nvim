@@ -43,14 +43,13 @@ return packer.startup(function(use)
 	-- My plugins here
 	use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
-	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
+	use({ "windwp/nvim-autopairs" })
 	use({ "numToStr/Comment.nvim" })
 	use({ "tpope/vim-repeat" })
 	use({ "tpope/vim-surround" })
-	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "kyazdani42/nvim-web-devicons" })
-	use({ "kyazdani42/nvim-tree.lua" })
-	use({ "akinsho/bufferline.nvim" })
+	-- use({ "kyazdani42/nvim-tree.lua" })
+	-- use({ "akinsho/bufferline.nvim" })
 	use({ "moll/vim-bbye" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
@@ -60,7 +59,7 @@ return packer.startup(function(use)
 	use({ "folke/which-key.nvim" })
 	use({ "ggandor/leap.nvim" })
 	use({ "max397574/better-escape.nvim" })
-  use({ "kmonad/kmonad-vim" })
+	use({ "kmonad/kmonad-vim" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
@@ -73,6 +72,7 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-path" }) -- path completions
 	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "hrsh7th/cmp-emoji" })
 
@@ -96,7 +96,6 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
-	use({ "tpope/vim-fugitive" })
 
 	-- DAP
 	use({ "mfussenegger/nvim-dap" })
@@ -140,14 +139,6 @@ return packer.startup(function(use)
 
 	-- harpoon
 	use({ "ThePrimeagen/harpoon" })
-
-	-- Nvim in every browser text field!?
-	use({
-		"glacambre/firenvim",
-		run = function()
-			vim.fn["firenvim#install"](0)
-		end,
-	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -1,13 +1,5 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-	return
-end
-
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-	return
-end
-
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local kind_icons = {
@@ -77,6 +69,13 @@ cmp.setup({
 			}),
 			{ "i", "c" }
 		),
+		["<C-o>"] = cmp.mapping(
+			cmp.mapping.confirm({
+				behavior = cmp.ConfirmBehavior.Insert,
+				select = true,
+			}),
+			{ "i", "c" }
+		),
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
@@ -93,6 +92,7 @@ cmp.setup({
 			vim_item.menu = ({
 				copilot = "[copilot]",
 				nvim_lsp = "[lsp]",
+				nvim_lsp_signature_help = "[lsp]",
 				nvim_lua = "[lua]",
 				luasnip = "[snip]",
 				buffer = "[buf]",
@@ -102,15 +102,16 @@ cmp.setup({
 			return vim_item
 		end,
 	},
-	sources = {
+	sources = cmp.config.sources({
 		{ name = "copilot" },
 		{ name = "nvim_lua" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" },
 		{ name = "emoji" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 5 },
-	},
+	}),
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),

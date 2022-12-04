@@ -2,10 +2,7 @@
 -- Author: shadmansaleh
 -- Credit: glepnir
 
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-  return
-end
+local lualine = require("lualine")
 
 -- Color table for highlights
 -- stylua: ignore
