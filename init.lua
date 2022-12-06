@@ -1,28 +1,31 @@
-require "user.options"
-require "user.keymaps"
-require "user.autocommands"
-require "user.plugins"
-require "user.comment"
-require "user.colorscheme"
-require "user.cmp"
-require "user.telescope"
-require "user.treesitter"
-require "user.lualine"
-require "user.impatient"
-require "user.illuminate"
-require "user.betterescape"
-require "user.whichkey"
-require "user.project"
-require "user.toggleterm"
+require("user.options")
+require("user.keymaps")
+require("user.autocommands")
+require("user.plugins")
+require("user.comment")
+require("user.colorscheme")
+require("user.cmp")
+require("user.telescope")
+require("user.treesitter")
+require("user.lualine")
+require("user.impatient")
+require("user.illuminate")
+require("user.betterescape")
+require("user.whichkey")
+require("user.project")
+require("user.toggleterm")
+require("user.winbar")
+require("user.autosave")
+require("user.zenmode")
 
-require "user.gitsigns"
+require("user.gitsigns")
 -- require "user.nvim-tree"
 -- require "user.bufferline"
-require "user.indentline"
-require "user.lsp"
-require "user.dap"
-require "user.leap"
-require "user.harpoon"
-require "user.neotest"
-require "user.rusttools"
-require "user.autopairs"
+require("user.indentline")
+require("user.lsp")
+require("user.dap")
+require("user.leap")
+require("user.harpoon")
+require("user.neotest")
+require("user.rusttools")
+require("user.autopairs")
