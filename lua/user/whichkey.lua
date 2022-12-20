@@ -72,6 +72,8 @@ wk.register({
 	h = { "<cmd>nohlsearch<cr>", "Clear highlights" },
 	e = { "<cmd>NvimTreeToggle<cr>", "File tree" },
 	q = { "<cmd>cclose<cr>", "Close quickfix" },
+	z = { "<cmd>ZenMode<cr>", "Zen mode" },
+	w = { "<cmd>w<cr>", "Save" },
 	f = {
 		name = "Find",
 		f = { ":Telescope find_files hidden=true<cr>", "Files" },

@@ -17,13 +17,6 @@ require("nvim-treesitter.configs").setup({
 				["i,"] = { query = "@parameter.inner", desc = "Inner parameter" },
 			},
 		},
-		lsp_interop = {
-			enable = true,
-			border = "rounded",
-			peek_definition_code = {
-				["<leader>dh"] = { query = "@function.outer", desc = "Peek function definition" },
-			},
-		},
 		swap = {
 			enable = true,
 			swap_next = {
