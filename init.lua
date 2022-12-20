@@ -17,15 +17,14 @@ require("user.toggleterm")
 require("user.winbar")
 require("user.autosave")
 require("user.zenmode")
+require("user.indentline")
+require("user.lsp")
 
 require("user.gitsigns")
 -- require "user.nvim-tree"
 -- require "user.bufferline"
-require("user.indentline")
-require("user.lsp")
 require("user.dap")
 require("user.leap")
 require("user.harpoon")
 require("user.neotest")
-require("user.rusttools")
 require("user.autopairs")
