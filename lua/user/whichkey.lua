@@ -69,7 +69,6 @@ vim.keymap.set("", "<Space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
 
 wk.register({
-	h = { "<cmd>nohlsearch<cr>", "Clear highlights" },
 	e = { "<cmd>Ex<cr>", "File browser" },
 	q = { "<cmd>cclose<cr>", "Close quickfix" },
 	z = { "<cmd>ZenMode<cr>", "Zen mode" },
@@ -141,6 +140,7 @@ wk.register({
 		c = { "<cmd>lua require('rust-tools').open_cargo_toml.open_cargo_toml()<cr>", "Open cargo.toml" },
 		p = { "<cmd>lua require('rust-tools').parent_module.parent_module()<cr>", "Parent module" },
 		t = { "<cmd>lua require('rust-tools').hover_range.hover_range()<cr>", "Type of selection" },
+		a = { "<cmd>lua require('rust-tools').hover_actions.hover_actions()<cr>", "Hover actions" },
 	},
 	p = {
 		name = "Harpoon",

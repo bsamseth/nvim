@@ -61,9 +61,7 @@ return packer.startup(function(use)
 	use({ "max397574/better-escape.nvim" })
 	use({ "fgheng/winbar.nvim" })
 	use({ "kmonad/kmonad-vim" })
-	use({ "Pocco81/auto-save.nvim" })
 	use({ "folke/zen-mode.nvim" })
-	use({ "smithbm2316/centerpad.nvim" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
@@ -78,6 +76,7 @@ return packer.startup(function(use)
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
+			{ "j-hui/fidget.nvim" },
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" },

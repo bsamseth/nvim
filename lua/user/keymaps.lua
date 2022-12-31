@@ -2,10 +2,10 @@
 -- keymaps that are triggered directly, not hidden behind some prefix key(s).
 -- Most custom keybinds should be added to whichkey.lua instead of this file.
 
--- Shorten function name
-local keymap = vim.keymap.set
--- Silent keymap option
-local opts = { silent = true }
+local keymaps = function(mode, lhs, rhs)
+	local opts = { noremap = true, silent = true }
+	vim.keymap.set(mode, lhs, rhs, opts)
+end
 
 -- Modes
 --   normal_mode = "n",
@@ -16,32 +16,31 @@ local opts = { silent = true }
 --   command_mode = "c",
 
 -- Normal --
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<C-Left>", "<C-w>h", opts)
-keymap("n", "<C-Down>", "<C-w>j", opts)
-keymap("n", "<C-Up>", "<C-w>k", opts)
-keymap("n", "<C-Right>", "<C-w>l", opts)
+keymaps("n", "<C-h>", "<C-w>h")
+keymaps("n", "<C-j>", "<C-w>j")
+keymaps("n", "<C-k>", "<C-w>k")
+keymaps("n", "<C-l>", "<C-w>l")
+keymaps("n", "<C-Left>", "<C-w>h")
+keymaps("n", "<C-Down>", "<C-w>j")
+keymaps("n", "<C-Up>", "<C-w>k")
+keymaps("n", "<C-Right>", "<C-w>l")
 
 -- Resize with arrows
-keymap("n", "<C-S-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-S-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-S-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-S-Right>", ":vertical resize +2<CR>", opts)
+keymaps("n", "<C-S-Up>", ":resize -2<CR>")
+keymaps("n", "<C-S-Down>", ":resize +2<CR>")
+keymaps("n", "<C-S-Left>", ":vertical resize -2<CR>")
+keymaps("n", "<C-S-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-Right>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-Left>", ":bprevious<CR>", opts)
+keymaps("n", "<S-l>", ":bnext<CR>")
+keymaps("n", "<S-Right>", ":bnext<CR>")
+keymaps("n", "<S-h>", ":bprevious<CR>")
+keymaps("n", "<S-Left>", ":bprevious<CR>")
 
 -- Better paste
-keymap("v", "p", '"_dP', opts)
+keymaps("v", "p", '"_dP')
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymaps("v", "<", "<gv")
+keymaps("v", ">", ">gv")
