@@ -62,6 +62,7 @@ return packer.startup(function(use)
 	use({ "fgheng/winbar.nvim" })
 	use({ "kmonad/kmonad-vim" })
 	use({ "folke/zen-mode.nvim" })
+	use({ "jbyuki/venn.nvim" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
